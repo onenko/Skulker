@@ -4,32 +4,31 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import net.nenko.libs.NanoLog;
 
 /**
  * Cfg - maps properties read from property file
  */
 public class Cfg {
-	private static final Logger log = LoggerFactory.getLogger(Cfg.class);
+	private static final NanoLog log = new NanoLog(NanoLog.LogLevel.DEBUG, null);
 	private Properties properties = new Properties();
 
-	public Cfg(String propName) {
-		log.debug("Cfg: loading resources from " + propName);
+	public Cfg(String propertiesResource) {
+		log.debug("Cfg: loading resources from " + propertiesResource);
 		try {
-			InputStream iStream = getClass().getResourceAsStream(propName);
+			InputStream iStream = getClass().getResourceAsStream(propertiesResource);
 			if(iStream == null) {
-				log.error("Cfg: resource '{}' not found in classpath", propName);
+				log.error("Cfg: resource '{}' not found in classpath", propertiesResource);
 			} else {
 				properties.load(iStream);
 			}
 		} catch(IOException e) {
-			log.error("Cfg: error on loading resources from '{}'", propName, e);
+			log.error("Cfg: error on loading resources from '{}'", propertiesResource, e);
 		}
 	}
 
-	public String getProp1() {
-		return properties.getProperty("key1");
+	public String getStrategy() {
+		return properties.getProperty("Strategy");
 	}
 
 }

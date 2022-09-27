@@ -3,38 +3,22 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.nenko.utils</groupId>
   <artifactId>skulker</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Skulker</name>
 
   <properties>
-	<logback.version>1.1.2</logback.version>
-	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<slf4j-api.version>1.7.7</slf4j-api.version>
+	 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
 	<dependencies>
-
-		<!-- SLF4J - API -->
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j-api.version}</version>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		    <scope>test</scope>
 		</dependency>
-
-		<!-- logback -->
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-core</artifactId>
-			<version>${logback.version}</version>
-		</dependency>
-	
 	</dependencies>
 
 	<build>
@@ -47,34 +31,31 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-			</plugin>
+	 	   </plugin>
 
-<plugin>
-    <artifactId>maven-assembly-plugin</artifactId>
-    <executions>
-      <execution>
-        <phase>package</phase>
-        <goals>
-          <goal>single</goal>
-        </goals>
-      </execution>
-    </executions>
-    <configuration>
-      <archive>
-        <manifest>
-          <addClasspath>true</addClasspath>
-          <mainClass>net.nenko.utils.skulker.App</mainClass>
-        </manifest>
-      </archive>
-      <descriptorRefs>
-        <descriptorRef>jar-with-dependencies</descriptorRef>
-      </descriptorRefs>
-    </configuration>
-  </plugin> 
-
-
-        </plugins>
-
+  		   <plugin>
+ 		    <artifactId>maven-assembly-plugin</artifactId>
+		    <executions>
+		      <execution>
+		        <phase>package</phase>
+		        <goals>
+		          <goal>single</goal>
+		        </goals>
+		      </execution>
+		    </executions>
+		    <configuration>
+		      <archive>
+		        <manifest>
+		          <addClasspath>true</addClasspath>
+		          <mainClass>net.nenko.utils.skulker.App</mainClass>
+		        </manifest>
+		      </archive>
+		      <descriptorRefs>
+		        <descriptorRef>jar-with-dependencies</descriptorRef>
+		      </descriptorRefs>
+		    </configuration>
+		  </plugin> 
+      </plugins>
 	</build>
 
 </project>
