@@ -1,16 +1,14 @@
-package net.nenko.libs;
+package net.nenko.lib;
 
 import java.nio.charset.StandardCharsets;
 
 public class BitwiseByteEncoder {
-    private static final NanoLog log = new NanoLog(NanoLog.LogLevel.DEBUG, null);
     private byte[] password;
     private long byteEncryptCounter = 0L;
     private long byteDecryptCounter = 0L;
 
     public BitwiseByteEncoder(String password) {
         this.password = password.getBytes(StandardCharsets.UTF_8);
-        log.info("BitwiseByteEncoder({}) created. Password: {}", password, bytesToString(this.password));
     }
 
     public byte encrypt(byte b) {

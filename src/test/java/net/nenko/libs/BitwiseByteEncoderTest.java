@@ -1,5 +1,6 @@
 package net.nenko.libs;
 
+import net.nenko.lib.BitwiseByteEncoder;
 import org.junit.Test;
 
 import java.nio.charset.StandardCharsets;

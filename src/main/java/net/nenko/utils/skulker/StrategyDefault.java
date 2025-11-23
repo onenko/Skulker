@@ -1,7 +1,7 @@
 package net.nenko.utils.skulker;
 
-import net.nenko.libs.BytesHelper;
-import net.nenko.libs.NanoVLQ;
+import net.nenko.lib.BytesHelper;
+import net.nenko.lib.NanoVLQ;
 
 import java.io.InputStream;
 import java.io.OutputStream;

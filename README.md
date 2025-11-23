@@ -2,7 +2,7 @@
 
 Command line utility to encrypt your sensitive files, and skulk these files into regular files.
 
-### Examples of command line
+### Examples of command line (outdated)
 
 You have secret agreement file '\Users\nenko\Documents\Secret_Agreement.docx', which you want to hide.
 You select some carrier file, like '\Users\nenko\Downloads\IMG_3456.JPG' with photo of your cat, and run
@@ -26,7 +26,9 @@ java -jar Skulker x <directory-with-files-to-hide> <directory-with-carrier-files
 ```
 Reverse operations, with 1 file and with directory tree of files.
 
+## Command line format
 
+[Moved to separate file](cli.md)
 
 ### Abbreviation
 

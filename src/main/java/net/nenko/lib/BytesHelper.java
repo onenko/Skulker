@@ -1,4 +1,4 @@
-package net.nenko.libs;
+package net.nenko.lib;
 
 public final class BytesHelper {
 

@@ -1,6 +1,6 @@
 package net.nenko.utils.skulker;
 
-import net.nenko.libs.NanoVLQ;
+import net.nenko.lib.NanoVLQ;
 
 import java.io.*;
 
@@ -38,7 +38,7 @@ public abstract class Strategy {
 
 	protected abstract byte[] getSkulkedPathBytes(String filePath);
 
-	public void doEncrypt(Cntx cntx) {
+	public void encrypt(String skulkedFile, String carrierFile) {
 
 //		ByteSink byteSink = MoreFiles.asByteSink(outputFile.toPath(),
 //				StandardOpenOption.CREATE,
@@ -57,11 +57,11 @@ public abstract class Strategy {
 		FileOutputStream out = null;
 		FileInputStream in = null;
 		try {
-			long carrierLength = new File(cntx.carrierPath).length();
-			out = new FileOutputStream(cntx.carrierPath, true);		// to append = true
-			out.write(getSkulkedPathBytes(cntx.skulkedPath));
+			long carrierLength = new File(carrierFile).length();
+			out = new FileOutputStream(carrierFile, true);		// to append = true
+			out.write(getSkulkedPathBytes(skulkedFile));
 
-			in = new FileInputStream(cntx.skulkedPath);
+			in = new FileInputStream(skulkedFile);
 			for(;;) {
 				int readCount =	in.read(CHUNK);
 				if(readCount < 0) {

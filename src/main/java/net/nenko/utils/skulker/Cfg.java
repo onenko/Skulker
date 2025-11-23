@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import net.nenko.libs.NanoLog;
+import net.nenko.lib.NanoLog;
 
 /**
  * Cfg - maps properties read from property file
  */
 public class Cfg {
-	private static final NanoLog log = new NanoLog(NanoLog.LogLevel.DEBUG, null);
+	private static final NanoLog log = App.log;
 	private Properties properties = new Properties();
 
 	public Cfg(String propertiesResource) {
