@@ -1,0 +1,20 @@
+
+
+ymdd P Description
+==== = ===========
+4229 9 Implement VLQ value() with byte producer, write unit tests for this
+4210 8 implement password in the configuration or as an option, passed to SkulkedEncryptorPwd
+4210 8 plan desckulking: factory static deskulk(String fileName) stub + constructor SkulkedFile(String skulkedFullFileName, encryptor)
+4210 8 implement factory static deskulk(String fileName) to construct SkulkedFile from skulked file
+4210 8 implement constructor SkulkedFile(String skulkedFullFileName, encryptor)
+4210 8 test desculking - on JPG + simple test file, called from main
+
+
+
+
+====== DONE =============================================================================
+4210 9 SkulkedFile.java - skeleton
+4210 9 SkulkedFile.skulk() - implement
+4210 9 call SkulkedFile.skulk() from main()
+4210 9 test SkulkedFile.skulk(), with hollow encryption, with some simple test file and JPG carrier, check how skulked carrier is opened by image viewer
+4210 8 write simple SkulkedEncryptorPwd, with password based per byte encryptor
